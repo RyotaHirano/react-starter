@@ -1,0 +1,6 @@
+declare module "@babel/core"
+declare module "@babel/preset-react"
+declare module "prettier/*"
+declare module "*.json"
+declare module "*.css"
+declare module "*.md"

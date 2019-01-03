@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    /* Basic Options */
+    "target": "ES5",
+    "module": "commonjs",
+    "allowJs": true,
+    "jsx": "react", 
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts", "decls.d.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
