@@ -27,7 +27,7 @@ const plugins = [
 module.exports = {
   mode: MODE,
   devtool: DEV ? 'inline-source-map' : 'source-map',
-  entry: path.join(SRC, 'main.ts'),
+  entry: path.join(SRC, 'main.tsx'),
   output: {
     filename: '[name].js',
     chunkFilename: '[name].bundle.js',
@@ -63,12 +63,10 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
         use: [
-          DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
+          { loader: DEV ? 'style-loader/url' : MiniCssExtractPlugin.loader },
+          { loader: 'file-loader' }
         ]
       }
     ]
