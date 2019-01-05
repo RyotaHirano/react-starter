@@ -64,10 +64,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: DEV ? 'style-loader/url' : MiniCssExtractPlugin.loader },
-          { loader: 'file-loader' }
-        ]
+        use: DEV
+          ? ['style-loader/url', 'file-loader']
+          : [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
