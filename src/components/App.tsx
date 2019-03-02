@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 // normalize
-import "normalize.css/normalize.css"
+import 'normalize.css/normalize.css'
 import styled from 'styled-components'
 
 export type AppProps = {
@@ -9,12 +9,8 @@ export type AppProps = {
 
 export const App = (props: AppProps) => (
   <Container>
-    <Heading>
-      React Starter Dev Env
-    </Heading>
-    <P>
-      This is { props.name } Component.
-    </P>
+    <Heading>React Starter Dev Env</Heading>
+    <P>This is {props.name} Component.</P>
   </Container>
 )
 
@@ -27,5 +23,5 @@ const Heading = styled.h1`
 `
 
 const P = styled.p`
-  font-size: 1.0rem;
+  font-size: 1rem;
 `
